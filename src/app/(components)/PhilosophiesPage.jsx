@@ -29,10 +29,10 @@ function PhilosophiesPage() {
         color="#4335A7" /* Yellow color */
         text1="Chief Technology Officer"
         text2="Persist Ventures"
-        expandTrigger={{ start: 0.38, end: 0.65 }}
+        expandTrigger={{ start: 0.48, end: 0.65 }}
         initialSize={50}
         zIndex={20}
-        maxScale={20}
+        maxScale={40}
         textColor="#fafafa"
       />
     </section>
