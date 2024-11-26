@@ -1,0 +1,69 @@
+/* Main container styling */
+.about {
+    position: relative;
+    min-height: 100vh;  /* Full viewport height */
+    background-color: #78B3CE;  /* Blue background */
+    display: flex;
+    align-items: flex-start;  /* Align content to top */
+    padding: 5% 5%;  /* Padding around edges */
+    z-index: 30;
+}
+
+/* Content section styling */
+.content {
+    flex: 1;  /* Take up available space */
+    color: #FFF6E9;  /* Light text color */
+}
+
+/* Main heading style */
+.content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Paragraph text style */
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;  /* Line spacing */
+}
+
+/* Alternative about section styling (appears duplicated in original) */
+.about {
+    position: relative;
+    min-height: 100vh;
+    background-color: #78B3CE;
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;  /* Center horizontally */
+    justify-content: center;  /* Center vertically */
+    padding: 5%;
+}
+
+/* Alternative heading style */
+.heading {
+    font-size: 2.5em;
+    color: #FFF6E9;
+    margin-bottom: 20px;
+} 
+
+/* Container for all spheres */
+.spheresContainer {
+    position: relative;
+    width: 800px;  /* Fixed width */
+    height: 600px;  /* Fixed height */
+    
+    border-radius: 20px;  /* Rounded corners */
+    margin: 20px auto;  /* Center horizontally with margin */
+    padding: 40px;  /* Space inside container */
+    overflow: visible;  /* Allow spheres to expand outside container */
+    display: flex;
+    justify-content: center;  /* Center spheres horizontally */
+    align-items: center;  /* Center spheres vertically */
+}
+
+/* Individual sphere base styling */
+.expandableSphere {
+    position: absolute;  /* Position relative to container */
+    transform-origin: center;  /* Center point for transformations */
+    transition: all 0.3s ease;  /* Smooth transitions */
+}

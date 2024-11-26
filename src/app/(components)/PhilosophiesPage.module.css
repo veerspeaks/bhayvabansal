@@ -1,0 +1,29 @@
+.philosophies {
+    position: relative;
+    min-height: 100vh;
+    background-color: #FBF8EF; /* Background color matches expanded sphere */
+    display: flex;
+    align-items: flex-start;
+    padding: 5% 5%;
+    z-index: 30;
+  }
+  
+  .content {
+    flex: 1;
+    color: #333;
+  }
+  
+  .content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  .content em {
+    font-style: italic;
+    color: #ff9800;
+  }

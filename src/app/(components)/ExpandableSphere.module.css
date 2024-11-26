@@ -1,0 +1,82 @@
+/* Main container for all spheres */
+.spheresContainer {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+  overflow: visible; /* Allows expanded sphere to overflow */
+}
+
+/* Individual sphere styling */
+.expandableSphere {
+  position: absolute; /* Enables precise positioning */
+  border-radius: 50%; /* Creates circular shape */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transitions for all changes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Keeps content within sphere */
+}
+
+/* Container for expanded content */
+.content {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for expanded details */
+.details {
+  color: #333;
+  text-align: center;
+  font-size: 1em;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto; /* Scrollable content */
+  padding: 20px;
+  
+  border-radius: 15px;
+}
+
+/* Paragraph styling in details */
+.details p {
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+/* Container for sphere title */
+.text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 15; /* Keeps text above background */
+  transition: opacity 0.3s ease;
+}
+
+/* Sphere title text styling */
+.text1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  user-select: none; /* Prevents text selection */
+  transition: font-size 0.3s ease;
+}
+
+/* Reduced text size for minimized spheres */
+.smallText {
+  font-size: 0.8em;
+}
