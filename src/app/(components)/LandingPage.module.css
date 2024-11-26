@@ -7,6 +7,19 @@
   padding-left: 5%;
 }
 
+.content {
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0; /* Start with invisible content */
+  transform: translateY(20px); /* Start with content slightly below */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .content h1 {
   font-size: 6em;
   color: white;

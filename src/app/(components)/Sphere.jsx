@@ -29,7 +29,7 @@ function Sphere({ color, text1, text2, expandTrigger, onExpandComplete, textColo
       }
     };
 
-    scrollYProgress.onChange(handleScrollChange);
+    scrollYProgress.on("change", handleScrollChange);
 
     return () => {
       scrollYProgress.clearListeners();
