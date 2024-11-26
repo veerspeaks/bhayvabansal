@@ -93,7 +93,7 @@ function AboutPage() {
         color="#FBF8EF"
         text1="Chief Technology Officer"
         text2="Persist Ventures"
-        expandTrigger={{ start: 0.2, end: 0.38 }}
+        expandTrigger={{ start: 0.3, end: 0.38 }}
         initialSize={50}
         anyExpanded={expandedSphere !== null}
         zIndex={20}
