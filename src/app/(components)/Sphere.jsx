@@ -21,18 +21,22 @@ function Sphere({ color, text1, text2, expandTrigger, onExpandComplete, textColo
 
   useEffect(() => {
     const handleScrollChange = (value) => {
-      if (value >= expandTrigger.end && !isExpanded) {
-        setIsExpanded(true);
-        onExpandComplete && onExpandComplete();
-      } else if (value < expandTrigger.start && isExpanded) {
-        setIsExpanded(false);
+      if (value >= expandTrigger.end) {
+        if (!isExpanded) {
+          setIsExpanded(true);
+          onExpandComplete && onExpandComplete();
+        }
+      } else {
+        if (isExpanded) {
+          setIsExpanded(false);
+        }
       }
     };
 
-    scrollYProgress.on("change", handleScrollChange);
+    const unsubscribe = scrollYProgress.on("change", handleScrollChange);
 
     return () => {
-      scrollYProgress.clearListeners();
+      unsubscribe();
     };
   }, [scrollYProgress, expandTrigger, isExpanded, onExpandComplete]);
 
