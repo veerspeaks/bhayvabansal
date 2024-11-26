@@ -20,16 +20,20 @@ function Sphere({ color, text1, text2, expandTrigger, onExpandComplete, textColo
   );
 
   useEffect(() => {
-    const unsubscribe = scrollYProgress.onChange((value) => {
+    const handleScrollChange = (value) => {
       if (value >= expandTrigger.end && !isExpanded) {
         setIsExpanded(true);
         onExpandComplete && onExpandComplete();
       } else if (value < expandTrigger.start && isExpanded) {
         setIsExpanded(false);
       }
-    });
+    };
 
-    return () => unsubscribe();
+    scrollYProgress.onChange(handleScrollChange);
+
+    return () => {
+      scrollYProgress.clearListeners();
+    };
   }, [scrollYProgress, expandTrigger, isExpanded, onExpandComplete]);
 
   return (
