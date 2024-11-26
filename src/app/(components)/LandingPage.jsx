@@ -15,7 +15,7 @@ function LandingPage() {
         color="#78B3CE"
         text1="Chief Technology Officer"
         text2="Persist Ventures"
-        expandTrigger={{ start: 0.1, end: 0.2 }}
+        expandTrigger={{ start: 0.13, end: 0.2 }}
         textColor="#ffffff"
         initialSize={50}
         zIndex={5}
